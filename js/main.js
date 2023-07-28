@@ -1,21 +1,3 @@
-// 스크롤 시
-const itemWrap = document.querySelector('.item__wrap')
-const headerWrap = document.querySelector('.header-wrap')
-
-function itemWrapPosition() {
-  const scrollTop = window.scrollY
-  const bannerHeight = banner.clientHeight
-  const headerWrapHeight = headerWrap.clientHeight
-
-  if (scrollTop === 0) {
-    itemWrap.style.top = `${bannerHeight + headerWrapHeight}px`
-  } else {
-    itemWrap.style.top = `${headerWrapHeight}px`
-  }
-}
-
-window.addEventListener('scroll', itemWrapPosition)
-
 /**
  *  배너 닫기
  */
@@ -106,3 +88,37 @@ dropBtnEl.addEventListener('click', () => {
     dropMenuEl.style.display = 'none' // 드롭다운 메뉴 숨기기
   }
 })
+
+/**
+ * Scroll Magic
+ */
+const spyEls = document.querySelectorAll('section.scroll-spy')
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic.Scene({
+    triggerElement: spyEl,
+    triggerHook: 0.8,
+  })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller())
+})
+
+/**
+ * 순서대로 나타나는 기능
+ */
+function floatUpAnimation(selector) {
+  const elements = document.querySelectorAll(selector)
+
+  gsap.set(elements, { opacity: 0, y: 100 })
+
+  elements.forEach(function (element, index) {
+    gsap.to(element, {
+      duration: 1,
+      delay: index * 0.3,
+      opacity: 1,
+      y: 0,
+      ease: 'power3.out',
+    })
+  })
+}
+
+floatUpAnimation('.event .fade-in')
