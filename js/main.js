@@ -93,3 +93,16 @@ chatbotEl.addEventListener('click', () => {
     chatbotEl.classList.remove('show')
   }
 })
+
+/**
+ * 드롭다운 메뉴
+ */
+const dropBtnEl = document.getElementById('dropdown')
+const dropMenuEl = document.querySelector('.dropdown-menu')
+dropBtnEl.addEventListener('click', () => {
+  if (dropMenuEl.style.display === 'none') {
+    dropMenuEl.style.display = 'block' // 드롭다운 메뉴 보이기
+  } else {
+    dropMenuEl.style.display = 'none' // 드롭다운 메뉴 숨기기
+  }
+})

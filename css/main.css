@@ -62,9 +62,16 @@
   background: #fff;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
   margin: 0 auto 10px;
+  cursor: pointer;
 }
 
 /* visual */
+
+.visual {
+  position: relative;
+  background: #000;
+}
+
 .visual-stage {
   overflow: hidden;
   position: relative;
@@ -80,9 +87,7 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
-  max-width: 1920px;
-  min-height: 1440px;
+  transform: translate(-50%);
 }
 
 .visual-content {
@@ -90,8 +95,8 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
-  z-index: 2;
+  transform: translate(0, -50%);
+  z-index: 1;
 }
 
 .visual-content .tit {
@@ -127,10 +132,6 @@
   white-space: nowrap;
 }
 
-.visual {
-  position: relative;
-  background: #000;
-}
 .visual-container {
   width: 100%;
   height: 880px;
@@ -138,8 +139,6 @@
 .visual-bg-area img {
   position: relative;
   display: block;
-  /* width: 100%; */
-  /* height: 100%; */
   margin: 0 auto;
 }
 
@@ -182,6 +181,7 @@
   z-index: 2;
   transform: translateX(-50%);
 }
+
 .visual-control__play {
   display: block;
   margin-right: 10px;
@@ -192,6 +192,7 @@
   outline: none;
   border: none;
 }
+
 .visual-control__play.is-pause {
   background: url('../asset/play.png') no-repeat 0 0;
   background-size: 36px;
@@ -221,7 +222,7 @@
   display: inline-block;
   cursor: pointer;
   vertical-align: top;
-  margin: 0 6px !important;
+  margin: 0 6px;
 }
 
 .swiper-container .visual-area-control .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -232,23 +233,12 @@
 }
 
 .swiper-pagination-bullet {
-  border: 0 !important;
+  border: 0;
 }
 .visual .swiper-container {
   padding: 0;
   width: 100%;
   height: 880px;
-}
-.swiper-container--empty {
-  display: none;
-} /* [D] 슬라이드 갯수가 0개 일때, .swiper-container가 swiper-container--empty 클래스를 갖음 */
-.swiper-container--alone {
-} /* [D] 슬라이드 갯수가 1개 일때, .swiper-container가 swiper-container--alone 클래스를 갖음 */
-.visual-bg-area {
-  position: absolute;
-  /* width: 100vw; */
-  left: 50%;
-  transform: translate(-50%);
 }
 
 .swiper-slide {
@@ -263,13 +253,11 @@
 .arrow-down {
   position: absolute;
   left: 50%;
-  bottom: 54px;
   width: 24px;
-  height: 93px;
+  bottom: 50px;
   text-align: center;
-  transform: translateX(-50%);
+  transform: translate(-50%);
   z-index: 10;
-  bottom: 150px;
 }
 
 /* EVENT */
@@ -283,16 +271,13 @@
 }
 
 .item-container .item-box {
-  width: 345px !important;
-  height: 564px !important;
+  width: 345px;
+  height: 564px;
   position: relative;
   border-radius: 14px;
   transition: all 0.5s ease-in-out;
-  color: #000;
-  border-radius: 14px;
   margin-bottom: 20px;
-  padding: 32px 36px !important;
-  box-sizing: border-box;
+  padding: 32px 36px;
 }
 
 .item-container .item-box a h3 {
@@ -304,7 +289,7 @@
   color: #333;
 }
 
-.item-container .item-box a .description {
+.item-container .item-box a .desc {
   font-size: 18px;
   color: #333;
 }
@@ -337,7 +322,6 @@
 
 .payment-title {
   margin-bottom: 56px;
-  /* opacity: 0; */
   transform: translate3d(0, 20%, 0);
   transition: 1s ease-in-out;
   text-align: center;
@@ -361,18 +345,12 @@
 }
 
 .payment-container .is-scale {
-  width: 564px !important;
+  width: 564px;
 }
 
 .payment-container > .item-box .item-el {
   overflow: hidden;
   border-radius: 14px;
-}
-
-.payment-container > .item-box .item-el .item-thumb {
-}
-
-.payment-container > .item-box .item-el .item-thumb img {
 }
 
 .item-txt {
@@ -390,7 +368,7 @@
   letter-spacing: -2px;
 }
 
-.item-txt .description {
+.item-txt .desc {
   margin-top: 4px;
   font-size: 20px;
   color: #fff;
@@ -401,65 +379,67 @@
 .item-btn-area {
   display: block;
   position: absolute;
-  right: 120px;
-  bottom: 42px;
   width: 140px;
   height: 40px;
-  line-height: 40px;
+  right: 40px;
+  bottom: 42px;
 }
 
 .item-btn-area > .btn {
   padding: 0 40px;
 }
 
-/* YOUDOC */
+/* promotion */
 
-.youdoc {
+.promotion {
   position: relative;
   height: 750px;
   margin-top: 180px;
   overflow: hidden;
 }
-.youdoc-area {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1440px;
-  height: 750px;
+.pr-area {
+  position: relative;
+  height: 100%;
 }
 
-.youdoc-area > .inner {
-  height: 750px;
-}
-
-.youdoc-area .title {
+.promotion .section-title {
   padding-top: 80px;
-  text-align: center;
 }
 
-.youdoc-area .title h1 {
-  font-size: 36px;
-  line-height: 56px;
-}
-
-.youdoc-area .title .link {
+.promotion .more {
   margin-top: 16px;
   display: inline-flex;
   align-items: center;
   font-weight: 400;
 }
 
-.youdoc-area .detail-img {
-  position: absolute;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
-  bottom: -5px;
+.promotion .more::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: inline-flex;
+  margin-left: 4px;
+  border: 2px solid #fff;
+  border-left: transparent;
+  border-top: transparent;
+  transform: rotate(-45deg);
+  position: relative;
+  top: -1px;
 }
 
-.youdoc-bg {
-  text-align: center;
+.promotion-img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0px;
+}
+
+.promotion-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
 }
 
 /* CONTENT */
@@ -475,8 +455,6 @@
   position: relative;
   overflow: hidden;
   border-radius: 14px;
-}
-.content-container .content-item img {
 }
 
 .content-txt {
@@ -496,48 +474,6 @@
   color: #333;
   font-weight: 100;
 }
-
-/* DEVICE */
-.device {
-  margin-top: 180px;
-}
-.device-navi {
-  display: flex;
-  margin-bottom: 60px;
-  justify-content: center;
-  text-align: center;
-}
-
-.navi-item {
-  width: 230px;
-  font-size: 30px;
-  font-weight: 700;
-  color: #838383;
-}
-
-.navi-item.active {
-  color: #000;
-}
-
-.navi-item:first-child::after,
-.navi-item:last-child::before {
-  content: '';
-  display: inline-flex;
-  background: url('../asset/sprites-common.svg') no-repeat -699px -400px;
-  width: 15px;
-  height: 26px;
-}
-
-.navi-item:first-child::after {
-  margin-left: 100px;
-}
-
-.navi-item:last-child::before {
-  transform: rotate(180deg);
-  margin-right: 100px;
-}
-
-/* DEVICE */
 
 /* DEVICE */
 .device {
