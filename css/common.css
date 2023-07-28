@@ -1,0 +1,231 @@
+/**
+ * Minified by jsDelivr using clean-css v5.3.2.
+ * Original file: /npm/reset-css@5.0.2/reset.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+[hidden] {
+  display: none;
+}
+body {
+  line-height: 1.5;
+}
+menu,
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*# sourceMappingURL=/sm/04f4d35563f7cf9516264fcbb6e11a85def2ae5616df66563711867fe05befec.map */
+
+button {
+  background-color: transparent;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  vertical-align: middle;
+}
+
+[type='button']:not(:disabled),
+[type='reset']:not(:disabled),
+[type='submit']:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.inner {
+  width: 1440px;
+  margin: auto;
+  position: relative;
+}
+
+#wrap {
+  min-width: 1440px;
+}
+
+/* COMMON */
+.white {
+  color: #fff !important;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.section-title h1 {
+  line-height: 60px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.btn {
+  color: #fff;
+  background-color: #e6007e;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-weight: 100;
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+  padding: 0 30px;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #730024;
+}
+
+a.link {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.link::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 4px;
+  border: 2px solid #000;
+  border-left: transparent;
+  border-top: transparent;
+  transform: rotate(-45deg);
+  position: relative;
+  top: -3px;
+}
