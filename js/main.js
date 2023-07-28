@@ -76,3 +76,20 @@ const setSwiperStart = (swiper) => {
   })
 }
 setSwiperStart(swiper)
+
+/**
+ * 챗봇 토글
+ */
+const chatbotEl = document.querySelector('.chatbot--btn')
+const subMenu = document.querySelector('.sub-menu')
+let onToggle = false
+chatbotEl.addEventListener('click', () => {
+  onToggle = !onToggle
+  if (onToggle) {
+    subMenu.classList.add('show')
+    chatbotEl.classList.add('show')
+  } else {
+    subMenu.classList.remove('show')
+    chatbotEl.classList.remove('show')
+  }
+})

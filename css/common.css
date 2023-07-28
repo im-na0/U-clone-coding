@@ -160,6 +160,10 @@ button:not(:disabled) {
   cursor: pointer;
 }
 
+img {
+  display: block;
+}
+
 .inner {
   width: 1440px;
   margin: auto;
@@ -170,7 +174,6 @@ button:not(:disabled) {
   min-width: 1440px;
 }
 
-/* COMMON */
 .white {
   color: #fff !important;
 }
