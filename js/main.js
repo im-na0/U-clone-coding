@@ -23,10 +23,16 @@ closeBn()
 /**
  * 슬라이드 요소 관리
  */
+<<<<<<< HEAD
 const SECONDS_TO_MS = 1000
 const swiper = new Swiper('.visual .swiper-container', {
   autoplay: {
     delay: 5 * SECONDS_TO_MS,
+=======
+const swiper = new Swiper('.visual .swiper-container', {
+  autoplay: {
+    delay: 5000, // 5초마다 슬라이드 바뀜
+>>>>>>> 48df4b918e49ba4336a4d36d89842646a9862cf7
   },
   loop: true,
   slidesPerView: 1,
@@ -48,6 +54,10 @@ const setSwiperStart = (swiper) => {
   let isPause = false
 
   tab.addEventListener('click', function () {
+<<<<<<< HEAD
+=======
+    isPause = !isPause
+>>>>>>> 48df4b918e49ba4336a4d36d89842646a9862cf7
     if (isPause) {
       tab.classList.add('is-pause')
       swiper.autoplay.stop() // 일시 정지
@@ -55,7 +65,10 @@ const setSwiperStart = (swiper) => {
       tab.classList.remove('is-pause')
       swiper.autoplay.start() // 자동 재생 시작
     }
+<<<<<<< HEAD
     isPause = !isPause
+=======
+>>>>>>> 48df4b918e49ba4336a4d36d89842646a9862cf7
   })
 }
 setSwiperStart(swiper)
@@ -63,11 +76,26 @@ setSwiperStart(swiper)
 /**
  * 챗봇 토글
  */
+<<<<<<< HEAD
 const chatbotEl = document.querySelector('.chatbot__toggle')
 const subMenu = document.querySelector('.chatbot__submenu')
 chatbotEl.addEventListener('click', () => {
   subMenu.classList.toggle('show')
   chatbotEl.classList.toggle('show')
+=======
+const chatbotEl = document.querySelector('.chatbot--btn')
+const subMenu = document.querySelector('.sub-menu')
+let onToggle = false
+chatbotEl.addEventListener('click', () => {
+  onToggle = !onToggle
+  if (onToggle) {
+    subMenu.classList.add('show')
+    chatbotEl.classList.add('show')
+  } else {
+    subMenu.classList.remove('show')
+    chatbotEl.classList.remove('show')
+  }
+>>>>>>> 48df4b918e49ba4336a4d36d89842646a9862cf7
 })
 
 /**
@@ -76,7 +104,15 @@ chatbotEl.addEventListener('click', () => {
 const dropBtnEl = document.getElementById('dropdown')
 const dropMenuEl = document.querySelector('.dropdown-menu')
 dropBtnEl.addEventListener('click', () => {
+<<<<<<< HEAD
   dropMenuEl.classList.toggle('show')
+=======
+  if (dropMenuEl.style.display === 'none') {
+    dropMenuEl.style.display = 'block' // 드롭다운 메뉴 보이기
+  } else {
+    dropMenuEl.style.display = 'none' // 드롭다운 메뉴 숨기기
+  }
+>>>>>>> 48df4b918e49ba4336a4d36d89842646a9862cf7
 })
 
 /**

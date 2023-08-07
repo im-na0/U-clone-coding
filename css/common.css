@@ -154,6 +154,12 @@ a:hover {
   vertical-align: middle;
 }
 
+<<<<<<< HEAD
+=======
+[type='button']:not(:disabled),
+[type='reset']:not(:disabled),
+[type='submit']:not(:disabled),
+>>>>>>> 48df4b918e49ba4336a4d36d89842646a9862cf7
 button:not(:disabled) {
   cursor: pointer;
 }
